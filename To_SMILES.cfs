@@ -1,0 +1,15 @@
+loop
+
+IF $has_mol
+
+Select Structure
+
+To_smiles 2
+
+putData SMILES $V2
+
+endif
+
+RECORD NEXT
+
+endloop
