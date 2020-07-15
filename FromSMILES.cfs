@@ -1,0 +1,13 @@
+LOOP
+*循环将smiles写入结构
+GETDATA $V1 SMILES
+*读取SMILES盒子的值并赋予V1
+FROM_SMILES $V1
+*自带函数，从v1中写入结构式
+PutData RegisterDate $DATE
+*记录执行此记录的日期
+SETVAl SMILES "SMILES"
+*不知道为什么SMILES本身会被赋值，因此将其还原
+RECORD NEXT
+*切换到下一条记录
+ENDLOOP
